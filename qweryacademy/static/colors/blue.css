@@ -1,0 +1,70 @@
+/* -----------------------------------------------------------------------------
+	Trener - Multipurpose Coaching & Training HTML/CSS Bootstrap Theme
+	v.1.0
+------------------------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------------------- */
+/* --- BLUE COLOR SCHEME
+/* ----------------------------------------------------------------------------- */
+
+	a:hover, a:focus, a.underline-link.text-primary:hover, a.underline-link.text-primary:focus, 
+	.text-primary,
+	.checkbox-label.checked:after,
+	.list-navigation,
+	.basic-link,
+	.nav-main > li.has-dropdown:hover:after, .nav-main > li.has-dropdown-wide:hover:after,
+	.pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus,
+	.icon-primary, .icon-box-hover:hover .icon {
+		color: #23aae2;
+	}
+	
+	.pace .pace-progress,
+	.sep-primary,
+	.bg-primary,
+	.btn-primary:before,
+	.btn-primary.btn-filled, 
+	.overlay-primary,
+	.nav-main > li ul a:before, .nav-main > li ul a:hover, .nav-main > li ul a:focus,
+	.icon-primary.icon-filled,
+	.label-primary, .label-primary[href]:hover, .label-primary[href]:focus,
+ 	.icon-primary:before,
+	.owl-theme .owl-controls .owl-page.active span,
+	#page-loader.loader-primary .loader-part,
+	.btn-primary-dark:hover:before, .btn-primary-dark:focus:before,
+	.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus,
+	.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus,
+	.nav-sidebar > li > a:hover, .nav-sidebar > li > a:focus, .nav-sidebar > li.active > a,
+	.panel-default > .panel-heading:hover {
+		background-color: #23aae2;
+	}
+	
+	.border-primary,
+	.btn-primary, .btn-primary:hover, .btn-primary:focus,
+	.icon-primary,
+	.btn-primary-dark:hover, .btn-primary-dark:focus,
+	.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus,
+	.post-author  {
+		border-color: #23aae2;
+	}
+
+	.testimonial-content.bg-primary:before { border-color: #23aae2 transparent transparent; }
+
+	a.text-primary:hover, a.text-primary:focus,
+	.nav-main li.highlighted a:hover, .nav-main li.highlighted a:focus {
+		color: #0787bc;
+	}
+	
+	.btn-primary.btn-filled:hover:before, .btn-primary.btn-filled:focus:before,
+	.bg-primary .form-control-btn,
+	.icon-box-hover .icon.icon-primary.icon-filled:hover:before, .icon-box-hover .icon-primary.icon-filled:focus:before,
+	.icon-box-hover:hover .icon-primary.icon-filled:before, .icon-box-hover:focus .icon-primary.icon-filled:before,
+	.btn-primary-dark,
+	.label-primary[href]:hover, .label-primary[href]:focus {
+		background-color: #0787bc;
+	}
+	
+	.btn-primary.btn-filled:hover, .btn-primary.btn-filled:focus,
+	.btn-primary-dark,
+	.icon-box-hover:hover .icon-primary.icon-filled, .icon-box-hover:focus .icon-primary.icon-filled {
+		border-color: #0787bc;
+	}

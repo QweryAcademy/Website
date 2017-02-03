@@ -1,0 +1,134 @@
+{% load staticfiles i18n %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+  <!-- Meta -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  
+  <!-- Title -->
+    <title>{% block title %}QweryAcademy{% endblock title %}</title>
+
+    <!-- Favicons -->
+<link rel="shortcut icon" href="{% static "images/favicon.png" %}">
+<link rel="apple-touch-icon" href="{% static "images/favicon_60x60.png" %}">
+<link rel="apple-touch-icon" sizes="76x76" href="{% static "images/favicon_76x76.png" %}">
+<link rel="apple-touch-icon" sizes="120x120" href="{% static "images/favicon_120x120.png" %}">
+<link rel="apple-touch-icon" sizes="152x152" href="{% static "images/favicon_152x152.png" %}">
+
+   <!-- Google Web Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+
+    {% block css %}
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.min.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/animations.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/owl.carousel.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/owl.transitions.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/owl.theme.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "colors/red.css"  %}" id="colors" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/font-awesome.min.css" %}" />
+
+    {% endblock %}
+
+  </head>
+
+<body class="sticky-nav">
+<!-- Header -->
+<header id="header" class="header header-white wide clearfix">
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="nav-bar clearfix">
+                <!-- Logo -->
+                <div class="logo pull-left">
+                    <a href="/"><img src="{% static "images/logo-black.jpg" %}" style="height: 50px" alt="Trener" /></a>
+                </div>
+                <!-- Mobile Nav Toggle -->
+                <a href="" class="mobile-menu-toggle pull-right"></a>
+                <!-- Social Icons -->
+                <div class="social-icons text-muted pull-right margin-left-20 hidden-sm hidden-xs">
+                   <a href="#" class="icon icon-xs icon-facebook"><i class="fa fa-facebook"></i></a>
+           		   <a href="#" class="icon icon-xs icon-twitter"><i class="fa fa-twitter"></i></a>
+          		   <a href="#" class="icon icon-xs icon-google-plus"><i class="fa fa-google-plus"></i></a> 
+                </div> 
+                <!-- Main Navigation-->
+                <ul class="menu nav nav-main text-uppercase pull-right margin-left-20 dropdown-dark">
+	                    <li class="">
+	                        <a href="#">About Us</a>
+	                    </li>
+	                    <li class="">
+	                        <a href="#">Open Source</a>
+	                    </li>
+	                    <li class="">
+	                        <a href="#">Contact</a>
+	                    </li>
+                      {% if request.user.is_authenticated %}
+                      <li >
+                        <a href="{% url 'users:detail' request.user.username  %}">{% trans "My Profile" %}</a>
+                      </li>
+                      <li >
+                        <a  href="{% url 'account_logout' %}">{% trans "Sign Out" %}</a>
+                    </li>
+              {% else %}
+              {% endif %}
+	                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="mobile-menu text-uppercase"></div>
+
+</header>
+<!-- Header / End -->
+    </div>
+
+    {% if messages %}
+          {% for message in messages %}
+              <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}</div>
+          {% endfor %}
+      {% endif %}
+
+      {% block content %}
+        <p>Use this document as a way to quick start any new project.</p>
+      {% endblock content %}
+
+    {% block modal %}{% endblock modal %}
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    {% block javascript %}
+      <!-- Scripts -->
+<script type="text/javascript" src="{% static "js/jquery-1.11.1.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/bootstrap.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.easing.1.3.js" %}"></script>
+<script type="text/javascript" src="{% static "js/page-loader.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.appear.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.validate.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/owl.carousel.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.counterup.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.colorbox-min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/waypoints.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.localscroll-1.2.7-min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.scrollTo-1.4.3.1-min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.tweet.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.parallax.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.fitvids.js" %}"></script>
+
+      <!-- Your stuff: Third-party javascript libraries go here -->
+
+      <!-- place project specific Javascript in this file -->
+      
+      <script src="{% static 'js/custom.js' %}"></script>
+      
+
+    {% endblock javascript %}
+  </body>
+</html>
+ 
