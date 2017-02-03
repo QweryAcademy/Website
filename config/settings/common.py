@@ -100,7 +100,7 @@ MANAGERS = ADMINS
 # ------------------------------------------------------------------------------
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
 DATABASES = {
-    'default': env.db('DATABASE_URL', default='postgres://localhost/qweryacademy'),
+    'default': env.db('DATABASE_URL', default='postgres:///qweryacademy'),
 }
 DATABASES['default']['ATOMIC_REQUESTS'] = True
 
