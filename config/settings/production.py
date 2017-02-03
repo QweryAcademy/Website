@@ -36,9 +36,9 @@ MIDDLEWARE = WHITENOISE_MIDDLEWARE + MIDDLEWARE
 # See https://opbeat.com/languages/django/
 INSTALLED_APPS += ('opbeat.contrib.django',)
 OPBEAT = {
-    'ORGANIZATION_ID': env('DJANGO_OPBEAT_ORGANIZATION_ID'),
-    'APP_ID': env('DJANGO_OPBEAT_APP_ID'),
-    'SECRET_TOKEN': env('DJANGO_OPBEAT_SECRET_TOKEN')
+    'ORGANIZATION_ID': 'f077189cab044c75b53ec8de6eca105f',
+    'APP_ID': 'c0c713c000',
+    'SECRET_TOKEN': '598244a4e1b1fb617ef2bb989c137c0d465fcf85',
 }
 MIDDLEWARE = (
     'opbeat.contrib.django.middleware.OpbeatAPMMiddleware',
