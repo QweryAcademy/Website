@@ -213,3 +213,4 @@ LOGGING = {
 
 # Your production stuff: Below this line define 3rd party library settings
 # ------------------------------------------------------------------------------
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
