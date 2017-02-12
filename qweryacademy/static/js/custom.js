@@ -311,32 +311,32 @@ var Trener = {
 			},
 		});
 	
-		$signInForm.submit(function(){
-			$alertModal.find('#alertModalLabel').html('');
-			$alertModal.find('.modal-alert-content').html('');
-			if ($signInForm.valid()){
-				$.ajax({
-					type: "POST",
-					url: "php/sign-in-form.php",
-					data: $(this).serialize(),
-					success: function(msg) {
-						if (msg === 'SEND') {
-							alertLabel = "Success!";
-							response = '<div><span class="icon icon-lg"><i class="fa fa-download text-primary"></i></span></div>Done! Please <strong>check your inbox</strong>. Thanks! ';
-						}
-						else {
-							alertLabel = "Error!";
-							response = '<div><span class="icon icon-lg"><i class="fa fa-times text-muted"></i></span></div>Ooops... It seems that we have a problem.';
-						}
-						$alertModal.find('#alertModalLabel').prepend(alertLabel);
-						$alertModal.find('.modal-alert-content').prepend(response);
-						$alertModal.modal('show');
-					}
-				 });
-				return false;
-			}
-			return false;
-		});
+		// $signInForm.submit(function(){
+		// 	$alertModal.find('#alertModalLabel').html('');
+		// 	$alertModal.find('.modal-alert-content').html('');
+		// 	if ($signInForm.valid()){
+		// 		$.ajax({
+		// 			type: "POST",
+		// 			url: "/",
+		// 			data: $(this).serialize(),
+		// 			success: function(msg) {
+		// 				if (msg === 'SEND') {
+		// 					alertLabel = "Success!";
+		// 					response = '<div><span class="icon icon-lg"><i class="fa fa-download text-primary"></i></span></div>Done! Please <strong>check your inbox</strong>. Thanks! ';
+		// 				}
+		// 				else {
+		// 					alertLabel = "Error!";
+		// 					response = '<div><span class="icon icon-lg"><i class="fa fa-times text-muted"></i></span></div>Ooops... It seems that we have a problem.';
+		// 				}
+		// 				$alertModal.find('#alertModalLabel').prepend(alertLabel);
+		// 				$alertModal.find('.modal-alert-content').prepend(response);
+		// 				$alertModal.modal('show');
+		// 			}
+		// 		 });
+		// 		return false;
+		// 	}
+		// 	return false;
+		// });
 	
 		/* Contact Form */
 		

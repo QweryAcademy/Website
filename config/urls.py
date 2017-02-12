@@ -7,10 +7,11 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.views.generic import TemplateView
 from django.views import defaults as default_views
-
+from . import views as main_views
 urlpatterns = [
-    url(r'^$', TemplateView.as_view(template_name='pages/home.html'), name='home'),
+    url(r'^$', main_views.HomeView.as_view(), name='home'),
     url(r'^about/$', TemplateView.as_view(template_name='pages/about.html'), name='about'),
+    url(r'^how-we-can-help/$', TemplateView.as_view(template_name='pages/how-we-help.html'), name='how_we_help'),
 
     # Django Admin, use {% url 'admin:index' %}
     url(r'^authorized-access-only/$', admin.site.urls),

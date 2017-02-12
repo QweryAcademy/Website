@@ -1,1 +1,250 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block content %}
+
+<!-- Title Bar -->
+<div id="page-title">
+
+    <div class="title-bar dark bg-black padded-vertical-70">
+        <div class="bg-image bg-image-3"></div>
+        <div class="overlay overlay-black editable-alpha" data-alpha="80"></div>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <span class="icon icon-lg icon-circle icon-primary margin-bottom-20 animated" data-animation="bounceIn"><i class="fa fa-user"></i></span>
+                    <h1 class="text-uppercase margin-bottom-0 animated" data-animation="flipInX" data-animation-delay="200"><strong>About</strong> Us</h1>
+                    <span class="sep sep-primary"></span>
+                    <div class="font-alt text-muted margin-bottom-20">Etiam porta ipsum at nibh faucibus dictum. Proin augue diam, luctus eu lobortis at, varius ut ipsum.
+                        Pellentesque non cursus arcu, at auctor dui. </div>
+                    <span data-target="local-scroll"><a href="#content" class="btn btn-sm btn-default">Get some info!</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Breadcrumbs -->
+    <div class="bordered-bottom">
+        <div class="container">
+            <ol class="breadcrumb text-uppercase">
+                <li><a href="/">Home</a></li>
+                <li class="active">About</li>
+            </ol>
+        </div>
+    </div>
+
+</div>
+<!-- Title Bar / End -->
+
+<!-- Content -->
+<div id="content">
+
+    <div class="container">
+
+        <div class="row padded-top-40">
+
+            <!-- Left Column -->
+            <div class="col-md-4">
+
+                <!-- Navigation list -->
+                <ul class="nav nav-sidebar margin-bottom-40">
+                    <li class="active"><a href="#tab1" data-toggle="tab"><i class="icon-before fa fa-user fa-fw text-muted-2x"></i>Who we are?</a></li>
+                    <li><a href="#tab2" data-toggle="tab"><i class="icon-before fa fa-clock-o fa-fw text-muted-2x"></i>Our History</a></li>
+                    <li><a href="#tab3" data-toggle="tab"><i class="icon-before fa fa-bolt fa-fw text-muted-2x"></i>Our Mission</a></li>
+                    <li><a href="#tab4" data-toggle="tab"><i class="icon-before fa fa-check fa-fw text-muted-2x"></i>Why Us?</a></li>
+                </ul>
+
+            </div>
+
+            <!-- Right Column -->
+            <div class="col-md-8">
+
+                <div class="tab-content margin-bottom-40">
+                    <div id="tab1" class="tab-pane fade in active">
+                        <h4 class="text-uppercase margin-bottom-0"><strong>About</strong> us</h4>
+                        <span class="sep sep-primary"></span>
+                        <p class="lead font-alt">Qwery Academy is an organisation that is concerned with raising proper programmers, who understand
+                            the Nitti gritty of what it takes to build great platforms that work properly.
+                        </p>
+                        <img src="images/gallery/about01.jpg" class="img-rounded margin-right-20 margin-bottom-20 pull-left" alt="" />
+                        <p>At Qwery Academy, we are aware of the challenges faced amongst individuals so we are set to train
+                            individuals to become excellent programmers with business acumen. Various courses would be taught
+                            that would help students equip themselves in the coding world; you learn to design various softwares
+                            such as <strong>websites, web applications and mobile applications;</strong> Learning various
+                            programming languages as you go along in the various courses.
+                        </p>
+                        <br />
+                        <img src="images/gallery/about02.jpg" class="img-rounded margin-left-20 margin-bottom-20 pull-right" alt="" />
+                        <p class="lead">There are so many programming languages; <strong>HTML, JAVASCRIPT, PYTHON, JAVA</strong> just to
+                            name a few and at Qwery Academy you would learn a lot about these languages.
+                        </p>
+                        <p>Our goal is to build platforms not just to learn coding languages for knowledge sake but also to
+                            help the student discover which language he/she is most comfortable with, how he/she should approach
+                            difficulties, which way works best.
+                        </p>
+                        <p>This academy is different, no cramming or learning just to <strong>“seem”</strong> smart, we’ll query
+                            everything. The questions <strong>WHY, HOW, WHEN AND WHERE??</strong> Are our watchwords. <strong>You always have to see the big picture.</strong>
+                        </p>
+                        <p>The team of developers who would teach are people who are able to break down concepts to basic levels
+                            and would even help you think the right way as a developer; how do you source for information
+                            as a developer if you are stuck on a project. We are raising developers who can also think on
+                            their own, because in real life, employers or people in business are attracted to problem solvers
+                            and not liabilities.</p>
+                    </div>
+                </div>
+                <div id="tab2" class="tab-pane fade">
+                    <h4 class="text-uppercase margin-bottom-0">Our <strong>History</strong></h4>
+                    <span class="sep sep-primary"></span>
+                    <p class="lead font-alt">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi pretium
+                        enim lacus, eu fermentum velit sagittis eget.</p>
+                    <div class="padded-30 margin-bottom-30">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <img src="images/gallery/about01.jpg" class="img-rounded" alt="" />
+                            </div>
+                            <div class="col-sm-8 padded-vertical-10">
+                                <span class="sep sep-primary sep-no-top"></span>
+                                <h6 class="margin-bottom-5 text-muted">02-2014</h6>
+                                <h5>Big Start!</h5>
+                                <p class="lead margin-bottom-0">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-grey padded-30 margin-bottom-30">
+                        <div class="row">
+                            <div class="col-sm-8 padded-vertical-10">
+                                <span class="sep sep-primary sep-no-top"></span>
+                                <h6 class="margin-bottom-5 text-muted">06-2014</h6>
+                                <h5>First Success!</h5>
+                                <p class="lead margin-bottom-0">Tristique senectus et netus et malesuada fames ac turpis egestas. Morbi pretium enim lacus,
+                                    eu fermentum velit sagittis eget.</p>
+                            </div>
+                            <div class="col-sm-4">
+                                <img src="images/gallery/about02.jpg" class="img-rounded" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="padded-30 margin-bottom-30">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <img src="images/gallery/about01.jpg" class="img-rounded" alt="" />
+                            </div>
+                            <div class="col-sm-8 padded-vertical-10">
+                                <span class="sep sep-primary sep-no-top"></span>
+                                <h6 class="margin-bottom-5 text-muted">11-2014</h6>
+                                <h5>New managing director</h5>
+                                <p class="lead margin-bottom-0">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab3" class="tab-pane fade">
+                    <h4 class="text-uppercase margin-bottom-0">Our <strong>mission</strong></h4>
+                    <span class="sep sep-primary"></span>
+                    <p class="lead">Morbi pretium enim lacus, eu fermentum velit sagittis eget. Quisque finibus magna in scelerisque dapibus.
+                        In finibus sem eget vestibulum tincidunt. Quisque varius turpis luctus augue accumsan egestas.
+                    </p>
+                    <div class="row padded-top-30">
+                        <!-- Icon Box -->
+                        <div class="col-sm-6 icon-box">
+                            <span class="icon icon-sm icon-circle icon-primary margin-bottom-20 animated" data-animation="bounceIn" data-animation-delay="400"><i class="fa fa-book"></i></span>
+                            <h5 class="margin-bottom-0">5 Premium <strong>Ebooks</strong></h5>
+                            <p class="text-muted">Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+                        </div>
+                        <!-- Icon Box -->
+                        <div class="col-sm-6 icon-box">
+                            <span class="icon icon-sm icon-circle icon-primary margin-bottom-20 animated" data-animation="bounceIn" data-animation-delay="400"><i class="fa fa-video-camera"></i></span>
+                            <h5 class="margin-bottom-0">6 <strong>Video</strong> Courses</h5>
+                            <p class="text-muted">Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+                        </div>
+                    </div>
+                    <div class="row padded-top-30">
+                        <!-- Icon Box -->
+                        <div class="col-sm-6 icon-box">
+                            <span class="icon icon-sm icon-circle icon-primary margin-bottom-20 animated" data-animation="bounceIn" data-animation-delay="400"><i class="fa fa-book"></i></span>
+                            <h5 class="margin-bottom-0">5 Premium <strong>Ebooks</strong></h5>
+                            <p class="text-muted">Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+                        </div>
+                        <!-- Icon Box -->
+                        <div class="col-sm-6 icon-box">
+                            <span class="icon icon-sm icon-circle icon-primary margin-bottom-20 animated" data-animation="bounceIn" data-animation-delay="400"><i class="fa fa-video-camera"></i></span>
+                            <h5 class="margin-bottom-0">6 <strong>Video</strong> Courses</h5>
+                            <p class="text-muted">Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab4" class="tab-pane fade">
+                    <h4 class="text-uppercase margin-bottom-0"><strong>Why</strong> Us?</h4>
+                    <span class="sep sep-primary"></span>
+                    <p class="lead">Morbi pretium enim lacus, eu fermentum velit sagittis eget. Quisque finibus magna in scelerisque dapibus.
+                        In finibus sem eget vestibulum tincidunt. Quisque varius turpis luctus augue accumsan egestas.
+                    </p>
+                    <img src="images/gallery/about01.jpg" class="img-rounded margin-right-20 margin-bottom-20 pull-left" alt="" />
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tristique suscipit volutpat. Suspendisse
+                        iaculis iaculis enim. Integer mattis lorem ut tincidunt egestas. Donec eu lorem et libero semper
+                        mollis non id nibh. Duis non nunc sit amet nulla dictum mollis in vitae quam. Sed vitae erat eu massa
+                        interdum dignissim. Sed egestas eu eros non dapibus. In libero libero, tempus in semper et, vehicula
+                        in lacus. Suspendisse pharetra, dui quis pellentesque tincidunt, diam tortor maximus urna, quis tempor
+                        quam eros at metus. Proin commodo sem sed scelerisque scelerisque. Pellentesque felis ligula, blandit
+                        et cursus non, blandit at turpis.</p>
+                    <br />
+                    <div class="row padded-top-30">
+                        <!-- Counter Box -->
+                        <div class="col-sm-4 counter-box">
+                            <span class="counter-number text-primary"><span class="counter-value">1.5</span>k</span>
+                            <h5 class="margin-bottom-5 text-light">Happy <strong>subscribers</strong></h5>
+                            <p class="text-muted margin-bottom-0 font-alt">Class aptent taciti sociosqu ad litora.</p>
+                            <span class="sep sep-default"></span>
+                        </div>
+                        <!-- Counter Box -->
+                        <div class="col-sm-4 counter-box">
+                            <span class="counter-number text-primary"><span class="counter-value">23</span></span>
+                            <h5 class="margin-bottom-5 text-light"><strong>Files</strong> in the package</h5>
+                            <p class="text-muted margin-bottom-0 font-alt">Class aptent taciti sociosqu ad litora.</p>
+                            <span class="sep sep-default"></span>
+                        </div>
+                        <!-- Counter Box -->
+                        <div class="col-sm-4 counter-box">
+                            <span class="counter-number text-primary"><span class="counter-value">2</span></span>
+                            <h5 class="margin-bottom-5 text-light"><strong>Months</strong> of my work</h5>
+                            <p class="text-muted margin-bottom-0 font-alt">Class aptent taciti sociosqu ad litora.</p>
+                            <span class="sep sep-default"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+<!-- Section -->
+<section class="section padded-vertical-70 dark">
+    <div class="bg-image bg-image-1"></div>
+    <div class="overlay overlay-black editable-alpha" data-alpha="60"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-lg-offset-3 text-center">
+                <span class="icon icon-lg animated bounce-in"><i class="fa fa-download text-primary"></i></span>
+                <div class="margin-bottom-20">
+                    <h4 class="text-uppercase margin-bottom-0"><strong>Get Access</strong> to free files!</h4>
+                    <p class="lead text-muted font-alt">Sign up to be the first to get all of my best business advices for free to your inbox.</p>
+                </div>
+                <form id="sign-in-form">
+                    <div class="form-group form-group-lg">
+                        <input type="text" id="emailSigned" name="emailSigned" class="form-control bg-white margin-bottom-5" placeholder="Tap here your e-mail address...">
+                    </div>
+                    <span class="checkbox-group margin-bottom-10"><input id="acceptRules" name="acceptRules" type="checkbox" checked/><label for="acceptRules" class="checkbox-label">I accept all the <a href="#" data-toggle="modal" data-target="#rulesModal">rules</a></label></span>
+                    <button type="submit" class="btn btn-primary btn-filled btn-lg"><i class="icon-before fa fa-plus"></i>Sign In!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Section / End -->
+
+</div>
+<!-- Content / End -->
+
+{% endblock content %}
