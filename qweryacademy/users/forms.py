@@ -9,7 +9,7 @@ class UserForm(forms.ModelForm):
         fields = ['email','name','number','location']
         
 
-    def save(self, commit=False):
+    def save(self, commit=True):
         instance = super().save(commit=False)
         instance.username = self.cleaned_data['name']
         if commit:

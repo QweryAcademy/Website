@@ -11,8 +11,10 @@ class HomeView(TemplateView):
             form.save()
             messages.add_message(request,messages.INFO,"Thank You for Registering")
             return redirect(reverse('home'))
+        return self.render_response(self.get_context_data(form=form))
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['form'] = UserForm()
+        if not 'form' in kwargs:
+            context['form'] = UserForm()
         return context
