@@ -16,9 +16,9 @@ class User(AbstractUser):
     number = models.CharField(_("Phone Number"), blank=True, max_length=13)
     location = models.CharField(_("Location"), blank=True, choices=(
         ('', _('Your Location')),
-         ('Lagos', _('Lagos')),
-         ('Ibadan', _('Ibadan')),
-         ('Abuja', _('Abuja'))
+        ('Lagos', _('Lagos')),
+        ('Ibadan', _('Ibadan')),
+        ('Abuja', _('Abuja'))
     ), max_length=50)
     name = models.CharField(_('Your Full Name'), blank=True, max_length=255)
 
@@ -27,3 +27,6 @@ class User(AbstractUser):
 
     def get_absolute_url(self):
         return reverse('users:detail', kwargs={'username': self.username})
+
+    def __repr__(self):
+        return "<User: %s>" % (self.email,)

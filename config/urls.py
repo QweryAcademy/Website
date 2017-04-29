@@ -14,7 +14,7 @@ urlpatterns = [
     url(r'^how-we-can-help/$', TemplateView.as_view(template_name='pages/how-we-help.html'), name='how_we_help'),
 
     # Django Admin, use {% url 'admin:index' %}
-    url(r'^authorized-access-only/$', admin.site.urls),
+    url(r'^authorized-access-only/', admin.site.urls),
 
     # User management
     url(r'^users/', include('qweryacademy.users.urls', namespace='users')),
