@@ -37,7 +37,7 @@ services:
       - "0.0.0.0:80:80"
 
     environment:
-      - MY_DOMAIN_NAME=qweryacademy.com
+      - MY_DOMAIN_NAME=www.qweryacademy.com
     ports:
       - "0.0.0.0:80:80"
       - "0.0.0.0:443:443"
