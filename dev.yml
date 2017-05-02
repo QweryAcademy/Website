@@ -23,8 +23,8 @@ services:
     environment:
       - POSTGRES_USER=qweryacademy
       - USE_DOCKER=yes
-    volumes:
-      - .:/app
+    # volumes:
+    #   - ./source_code:/app
     ports:
       - "8007:8000"
     links:

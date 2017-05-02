@@ -21,6 +21,9 @@ services:
       - postgres
       - redis
     command: /gunicorn.sh
+    ports:
+      - "8007:5000"
+    
     env_file: env.example
 
   nginx:

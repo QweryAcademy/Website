@@ -48,7 +48,8 @@ MIDDLEWARE = (
 # SECURITY CONFIGURATION
 # ------------------------------------------------------------------------------
 # See https://docs.djangoproject.com/en/1.9/ref/middleware/#module-django.middleware.security
-# and https://docs.djangoproject.com/ja/1.9/howto/deployment/checklist/#run-manage-py-check-deploy
+# and
+# https://docs.djangoproject.com/ja/1.9/howto/deployment/checklist/#run-manage-py-check-deploy
 
 # set this to 60 seconds and then to 518400 when you can prove it works
 SECURE_HSTS_SECONDS = 60
@@ -68,7 +69,8 @@ X_FRAME_OPTIONS = 'DENY'
 # ------------------------------------------------------------------------------
 # Hosts/domain names that are valid for this site
 # See https://docs.djangoproject.com/en/1.6/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = env.list('DJANGO_ALLOWED_HOSTS', default=['qweryacademy.com'])
+ALLOWED_HOSTS = env.list('DJANGO_ALLOWED_HOSTS', default=[
+                         'qweryacademy.com', 'www.qweryacademy.com'])
 # END SITE CONFIGURATION
 
 INSTALLED_APPS += ('gunicorn', )
@@ -103,7 +105,7 @@ INSTALLED_APPS += (
 
 # URL that handles the media served from MEDIA_ROOT, used for managing
 # stored files.
-MEDIA_URL = 'https://s3.amazonaws.com/%s/' % AWS_STORAGE_BUCKET_NAME
+# MEDIA_URL = 'https://s3.amazonaws.com/%s/' % AWS_STORAGE_BUCKET_NAME
 
 
 # Static Assets
@@ -116,7 +118,8 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # ------------------------------------------------------------------------------
 DEFAULT_FROM_EMAIL = env('DJANGO_DEFAULT_FROM_EMAIL',
                          default='QweryAcademy <noreply@qweryacademy.com>')
-EMAIL_SUBJECT_PREFIX = env('DJANGO_EMAIL_SUBJECT_PREFIX', default='[QweryAcademy] ')
+EMAIL_SUBJECT_PREFIX = env(
+    'DJANGO_EMAIL_SUBJECT_PREFIX', default='[QweryAcademy] ')
 SERVER_EMAIL = env('DJANGO_SERVER_EMAIL', default=DEFAULT_FROM_EMAIL)
 
 # Anymail with Mailgun
@@ -146,7 +149,8 @@ DATABASES['default'] = env.db('DATABASE_URL')
 # CACHING
 # ------------------------------------------------------------------------------
 
-REDIS_LOCATION = '{0}/{1}'.format(env('REDIS_URL', default='redis://127.0.0.1:6379'), 0)
+REDIS_LOCATION = '{0}/{1}'.format(env('REDIS_URL',
+                                      default='redis://127.0.0.1:6379'), 0)
 # Heroku URL does not pass the DB number, so we parse it in
 CACHES = {
     'default': {

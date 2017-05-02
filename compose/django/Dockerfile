@@ -9,7 +9,7 @@ RUN pip install -r /requirements/production.txt \
     && groupadd -r django \
     && useradd -r -g django django
 
-COPY . /app
+COPY ./source_code /app
 RUN chown -R django /app
 
 COPY ./compose/django/gunicorn.sh /gunicorn.sh
