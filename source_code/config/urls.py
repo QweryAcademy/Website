@@ -12,10 +12,11 @@ urlpatterns = [
     url(r'^$', main_views.HomeView.as_view(), name='home'),
     url(r'^about/$', TemplateView.as_view(template_name='pages/about.html'), name='about'),
     url(r'^blog/$', TemplateView.as_view(template_name='pages/how-we-help.html'), name='how_we_help'),
+    url(r'^unilag/$', TemplateView.as_view(template_name='pages/unilag.html'), name='unilag'),
     
 
     # Django Admin, use {% url 'admin:index' %}
-    url(r'^authorized-access-only/', admin.site.urls),
+    url(r'^authorized-access-only/', include(admin.site.urls)),
 
     # User management
     url(r'^users/', include('qweryacademy.users.urls', namespace='users')),
