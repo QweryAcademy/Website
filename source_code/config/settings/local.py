@@ -13,7 +13,7 @@ Local settings
 import socket
 import os
 from .common import *  # noqa
-import dj_database_url
+
 
 # DEBUG
 # ------------------------------------------------------------------------------
@@ -75,19 +75,6 @@ TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-db_from_env = dj_database_url.config()
-DATABASES['default'].update(db_from_env)
 
-
-#DATABASES = {
-    #'default': {
-        #'ENGINE': 'django.db.backends.postgresql',
-        #'NAME': 'qweryacademy',
-        #'USER': 'postgres',
-        #'PASSWORD': '123456',
-        #'HOST': 'localhost',
-        #'PORT': '',
-    #}
-#}
 
 
