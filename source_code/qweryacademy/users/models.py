@@ -18,7 +18,8 @@ class User(AbstractUser):
         ('', _('Your Location')),
         ('Lagos', _('Lagos')),
         ('Ibadan', _('Ibadan')),
-        ('Abuja', _('Abuja'))
+        ('Abuja', _('Abuja')),
+        ('Akure', _('Akure'))
     ), max_length=50)
     name = models.CharField(_('Your Full Name'), blank=True, max_length=255)
 
