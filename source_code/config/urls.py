@@ -13,6 +13,7 @@ urlpatterns = [
     url(r'^about/$', TemplateView.as_view(template_name='pages/about.html'), name='about'),
     url(r'^blog/$', TemplateView.as_view(template_name='pages/how-we-help.html'), name='how_we_help'),
     url(r'^unilag/$', TemplateView.as_view(template_name='pages/unilag.html'), name='unilag'),
+    url(r'^contact/$', TemplateView.as_view(template_name='pages/contact_us.html'), name='contact'),
     
 
     # Django Admin, use {% url 'admin:index' %}
