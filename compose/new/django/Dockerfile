@@ -1,4 +1,5 @@
-FROM python:3.5
+# FROM python:3.5
+FROM python:3.6
 
 ENV PYTHONUNBUFFERED 1
 
@@ -11,16 +12,19 @@ RUN pip install -r /requirements/production.txt \
 
 COPY ./source_code /app
 RUN chown -R django /app
-
+RUN mkdir -p /var/pyconng /var/pyconng_static
 COPY ./compose/django/gunicorn.sh /gunicorn.sh
 COPY ./compose/django/entrypoint.sh /entrypoint.sh
 RUN sed -i 's/\r//' /entrypoint.sh \
     && sed -i 's/\r//' /gunicorn.sh \
     && chmod +x /entrypoint.sh \
+    && chown django /var/pyconng \
+    && chown django /var/pyconng_static \
     && chown django /entrypoint.sh \
     && chmod +x /gunicorn.sh \
     && chown django /gunicorn.sh
 
 WORKDIR /app
+VOLUME ['/var/pyconng']
 
 ENTRYPOINT ["/entrypoint.sh"]
