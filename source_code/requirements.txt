@@ -34,7 +34,7 @@ MarkupSafe==1.0
 oauthlib==2.0.2
 olefile==0.44
 pickleshare==0.7.4
-Pillow==4.0.0
+Pillow==9.3.0
 pinax-boxes==2.1.2
 prompt-toolkit==1.0.14
 psycopg2==2.6.2
